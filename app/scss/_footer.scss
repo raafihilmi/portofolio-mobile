@@ -1,0 +1,30 @@
+.footer {
+  background-color: #e1e6f8;
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .red {
+    font-weight: bold;
+    color: #ff0000;
+  }
+  a {
+    color: $primary1;
+    font-weight: bold;
+
+    &:hover {
+      color: $primary2;
+      transition: $transition;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    &__detail {
+      padding-right: 4rem;
+      padding-left: 4rem;
+    }
+  }
+}

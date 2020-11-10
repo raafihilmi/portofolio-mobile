@@ -1,0 +1,93 @@
+.contact {
+  background: linear-gradient(180deg, #ceeff7 0%, #3cbfd4 100%), #ceeff7;
+  text-align: center;
+  padding-bottom: 4rem;
+  h2 {
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    .telp {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: $primary1;
+      width: 80%;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 7px;
+      color: #fff;
+
+      .fa-whatsapp {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      p {
+        font-size: 1.1rem;
+        font-weight: lighter;
+      }
+    }
+
+    .email {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: $primary1;
+      width: 80%;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 7px;
+      color: #fff;
+
+      .fa-envelope {
+        font-size: 1.6rem;
+        margin-right: 1rem;
+      }
+      p {
+        font-size: 1.1rem;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+@media screen and (min-width: 720px) {
+  .contact {
+    padding-top: 1rem;
+    h2 {
+      margin-bottom: 2rem;
+    }
+    &__detail {
+      flex-direction: row;
+      .telp {
+        justify-content: space-evenly;
+      }
+      .email {
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .contact {
+    h2 {
+    }
+    &__detail {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .telp {
+        justify-content: space-evenly;
+        margin: 0;
+        margin-right: 3rem;
+      }
+      .email {
+        justify-content: space-evenly;
+        margin: 0;
+      }
+    }
+  }
+}
