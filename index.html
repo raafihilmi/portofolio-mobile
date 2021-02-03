@@ -3,130 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raafi Hilmi Portfolio</title>
+    <link rel="stylesheet" href="./app/scss/style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="./app/scss/style.css" />
+    <title>Raafi Hilmi Portofolio</title>
   </head>
   <body>
-    <nav class="nav">
-      <div class="nav__center">
-        <!-- nav header -->
-        <div class="nav__header">
-          <a href="#" class="logo">raafihilmi</a>
-          <button class="nav__toggle">
-            <i class="fas fa-bars"></i>
-          </button>
+    <header>
+      <nav class="nav">
+        <div class="nav__container container">
+          <div class="nav__header">
+            <a href="#" class="logo">raafi hilmi</a>
+            <button class="nav__toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <ul class="nav__links links">
+            <li><a href="#">home</a></li>
+            <li><a href="#work">my work</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
         </div>
-        <!-- end of nav header -->
-
-        <!-- links -->
-        <ul class="nav__links">
-          <li><a href="#home">home</a></li>
-          <li><a href="#work">my work</a></li>
-          <li><a href="#contact">contact</a></li>
-          <li><a href="#about">about</a></li>
-        </ul>
-        <!-- end of the links -->
-      </div>
-    </nav>
-    <section class="hero section">
-      <div class="section-center">
-        <div class="flex">
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container container">
           <div class="hero__content">
-            <p>Hi, I'm Raafi Hilmi</p>
-            <p class="job">Front End Developer</p>
-            <h1>let's build awesome website with me</h1>
-            <div class="flex-btn">
-              <button class="btn primary">my work</button>
-              <button class="btn secondary">contact</button>
+            <div class="desc">
+              <h1>let's build your awesome website</h1>
+              <p class="job">i'm raafi hilmi, front end dev</p>
+            </div>
+            <div class="buttons">
+              <a href="#work" class="btn primary">my work</a>
+              <a href="#contact" class="btn second">contact</a>
             </div>
           </div>
           <div class="hero__img">
+            <img
+              src="./image/hero-image.svg"
+              alt="man standing front of the phone"
+              class="img"
+            />
           </div>
         </div>
-      </div>
-    </section>
-    <section class="work section">
-      <div class="section-center">
-        <h2>my work</h2>
-        <div class="grid-container">
-          <!-- single item -->
-          <div class="grid-item item-1">
-            <div class="img">
+      </section>
+      <section class="work" id="work">
+        <div class="work__container container">
+          <h2>what i've been up to</h2>
+          <p>here's a selection of some recent work</p>
+
+          <div class="work__card">
+            <!-- start of the card item -->
+            <div class="card">
+              <img src="./image/image1.svg" alt="" />
+              <div class="card-item">
+                <div class="languages">
+                  <p>html</p>
+                  <p>sass</p>
+                  <p>js</p>
+                </div>
+                <div class="main-content">
+                  <h3 class="challenge">the challenge</h3>
+                  <ul class="challenges">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Nisi adipisci odit quae porro.</li>
+                  </ul>
+                </div>
+                <div class="buttons">
+                  <a href="#" class="btn primary">live</a>
+                  <a href="#" class="btn second">github</a>
+                </div>
+              </div>
             </div>
-            <h3 class="title">single price grid component</h3>
-            <h4 class="ch">the challenge</h4>
-            <ul class="desc">
-              <li>View the optimal layout for Desktop and Mobile</li>
-              <li>Use hover state for the call-to-action</li>
-            </ul>
-            <div class="flex-btn">
-              <div class="btn live-btn">live</div>
-              <div class="btn github-btn">github</div>
+            <!-- end of the card item -->
+            <!-- start of the card item -->
+            <div class="card">
+              <img src="./image/image1.svg" alt="" />
+              <div class="card-item">
+                <div class="languages">
+                  <p>html</p>
+                  <p>sass</p>
+                  <p>js</p>
+                </div>
+                <div class="main-content">
+                  <h3 class="challenge">the challenge</h3>
+                  <ul class="challenges">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Nisi adipisci odit quae porro.</li>
+                  </ul>
+                </div>
+                <div class="buttons">
+                  <a href="#" class="btn primary">live</a>
+                  <a href="#" class="btn second">github</a>
+                </div>
+              </div>
             </div>
+            <!-- end of the card item -->
+            <!-- start of the card item -->
+            <div class="card">
+              <img src="./image/image1.svg" alt="" />
+              <div class="card-item">
+                <div class="languages">
+                  <p>html</p>
+                  <p>sass</p>
+                  <p>js</p>
+                </div>
+                <div class="main-content">
+                  <h3 class="challenge">the challenge</h3>
+                  <ul class="challenges">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Nisi adipisci odit quae porro.</li>
+                  </ul>
+                </div>
+                <div class="buttons">
+                  <a href="#" class="btn primary">live</a>
+                  <a href="#" class="btn second">github</a>
+                </div>
+              </div>
+            </div>
+            <!-- end of the card item -->
           </div>
-          <!-- end of single item -->
-          <!-- single item -->
-          <div class="grid-item item-2">
-            <div class="img"><img src="" alt="" /></div>
-            <h3 class="title">single price grid component</h3>
-            <h4 class="ch">the challenge</h4>
-            <ul class="desc">
-              <li>View the optimal layout for Desktop and Mobile</li>
-              <li>Use hover state for the call-to-action</li>
-            </ul>
-            <div class="flex-btn">
-              <div class="btn live-btn">live</div>
-              <div class="btn github-btn">github</div>
-            </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contact__container container">
+          <h2>get in touch</h2>
+          <p>Feel free to connect to me</p>
+          <div class="contact__cta">
+            <a
+              href="mailto:raafihilmi90@gmail.com"
+              target="_blank"
+              class="connect"
+              ><i class="fas fa-envelope"></i> gmail</a
+            >
+            <a
+              href="https://www.linkedin.com/in/raafi-hilmi-7b16371ba/"
+              target="_blank"
+              class="connect"
+            >
+              <i class="fab fa-linkedin"></i>linked in</a
+            >
           </div>
-          <!-- end of single item -->
-          <!-- single item -->
-          <div class="grid-item item-3">
-            <div class="img"><img src="" alt="" /></div>
-            <h3 class="title">single price grid component</h3>
-            <h4 class="ch">the challenge</h4>
-            <ul class="desc">
-              <li>View the optimal layout for Desktop and Mobile</li>
-              <li>Use hover state for the call-to-action</li>
-            </ul>
-            <div class="flex-btn">
-              <div class="btn live-btn">live</div>
-              <div class="btn github-btn">github</div>
-            </div>
-          </div>
-          <!-- end of single item -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__logo">
+          <a href="#" class="logo">raafi hilmi</a>
+        </div>
+        <div class="footer__links links">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="contact section">
-      <div class="section-center">
-        <h2>contact</h2>
-        <div class="contact__detail">
-          <div class="telp">
-            <i class="fab fa-whatsapp"></i>
-            <p>+6281398249990</p>
-          </div>
-          <div class="email">
-            <i class="far fa-envelope"></i>
-            <p>raafihilmi90@gmail.com</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="footer">
-    <div class="footer__detail">
-      <p>© 2020</p>
-      <p>Made With <span class="red">Love</span></p>
-      <a href="#">Home</a>
-    </div>
-    </section>
+    </footer>
     <script src="./app/js/app.js"></script>
   </body>
 </html>
