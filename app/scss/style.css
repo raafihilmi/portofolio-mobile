@@ -25,7 +25,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   text-transform: uppercase;
   margin-bottom: 1.2rem;
   font-weight: 700;
@@ -39,10 +40,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.325rem;
 }
 
 h3 {
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 0rem;
+}
+
+h4 {
   font-size: 1.175rem;
 }
 
@@ -51,8 +59,7 @@ h3 {
     font-size: 1.2em;
   }
   h1,
-  h2,
-  h3 {
+  h2 {
     letter-spacing: 7px;
   }
   h1 {
@@ -62,6 +69,9 @@ h3 {
     font-size: 2.5rem;
   }
   h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
     font-size: 1.25rem;
   }
 }
@@ -433,6 +443,11 @@ a {
   display: grid;
   place-items: center;
   gap: 2rem;
+  /* 
+      /////////
+      Modal
+      ///////
+      */
 }
 
 @media (min-width: 45em) {
@@ -456,6 +471,86 @@ a {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.work__card img:hover {
+  opacity: 0.8;
+}
+
+.work__card .modal {
+  z-index: 99;
+  display: none;
+  padding-top: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.work__card .modal-content {
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.work__card .modal-hover-opacity {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-backface-visibility: hidden;
+}
+
+.work__card .modal-hover-opacity:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-backface-visibility: hidden;
+}
+
+.work__card .close {
+  text-decoration: none;
+  float: right;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.work__card .modal-content,
+.work__card #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .work__card .card-item {
@@ -472,18 +567,22 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.8em;
 }
 
 .work__card .languages p {
-  margin-top: 0.5rem;
-  color: #5a5656;
+  color: #929292;
   text-transform: uppercase;
+}
+
+.work__card .languages p:not(:last-child) {
+  margin-right: 0.5rem;
 }
 
 .work__card .buttons {
@@ -498,11 +597,12 @@ a {
   color: #fff;
 }
 
-.work h3 {
+.work h4 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-align: left;
   letter-spacing: 1px;
+  color: #87585a;
 }
 
 .work ul {
@@ -591,19 +691,21 @@ a {
   background-color: #3f3d56;
   color: #fff;
   border-radius: 7px;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
   text-align: left;
   cursor: pointer;
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 45em) {
   .contact__cta .connect {
     width: 40%;
+    font-size: 1.5rem;
   }
 }
 
@@ -615,7 +717,7 @@ a {
 
 .contact__cta .connect i {
   font-size: 1.5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .contact__cta .connect::after {
@@ -625,17 +727,19 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  background: rgba(0, 0, 0, 0.25);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  background: #6159e5;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   z-index: -1;
 }
 
 .contact__cta .connect:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .footer {

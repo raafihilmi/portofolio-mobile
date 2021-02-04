@@ -48,24 +48,26 @@
       background-color: $clr-primary2;
       color: $clr-neutral3;
       border-radius: 7px;
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
+      padding: 1rem;
+      font-size: 1.2rem;
       font-weight: 500;
       text-transform: uppercase;
       text-align: left;
       cursor: pointer;
       z-index: 1;
       position: relative;
+      overflow: hidden;
 
       @media (min-width: 45em) {
         width: 40%;
+        font-size: 1.5rem;
       }
       @media (min-width: 64em) {
         width: 30%;
       }
       i {
         font-size: 1.5rem;
-        margin-right: 2rem;
+        margin-right: 1rem;
       }
 
       &::after {
@@ -75,15 +77,16 @@
         height: 100%;
         top: 0;
         left: 0;
-        transform: scaleX(0);
-        background: rgba(0, 0, 0, 0.25);
+        transform: scaleY(0);
+        transform-origin: top;
+        background: $clr-primary;
         transition: all 250ms ease-in-out;
         z-index: -1;
       }
 
       &:hover {
         &::after {
-          transform: scaleX(1);
+          transform: scaleY(1);
         }
       }
     }
