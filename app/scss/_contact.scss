@@ -1,7 +1,7 @@
 .contact {
   background-color: #d0cfdc;
   position: relative;
-  z-index: 1;
+  z-index: -1;
 
   &::after {
     content: url(./../../image/contact-img.svg);
